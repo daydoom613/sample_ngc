@@ -1,65 +1,121 @@
-import Image from "next/image";
+'use client'
+
+import { HeroSection } from '@/components/HeroSection'
+import { InteractiveSphere } from '@/components/InteractiveSphere'
+import { BeforeAfterSlider } from '@/components/BeforeAfterSlider'
+import { NewsCards } from '@/components/NewsCards'
+import { Scene3DIntegration } from '@/components/Scene3DIntegration'
+import { Footer } from '@/components/Footer'
+import { ShowReel } from '@/components/ShowReel'
+
+// Sample data - move to `/data` later
+const FEATURED_PROJECTS = [
+  {
+    id: '1',
+    title: 'Nebula Odyssey',
+    category: 'Sci-Fi Film',
+    image: '/projects/nebula.jpg',
+    description: 'A journey through space exploring distant galaxies and cosmic phenomena.',
+  },
+  {
+    id: '2',
+    title: 'The Last Guardian',
+    category: 'Fantasy',
+    image: '/projects/guardian.jpg',
+    description: 'Epic creature animation and visual effects for a dark fantasy narrative.',
+  },
+  {
+    id: '3',
+    title: 'Urban Genesis',
+    category: 'Commercial',
+    image: '/projects/urban.jpg',
+    description: 'Photorealistic city simulation and procedural environment generation.',
+  },
+  {
+    id: '4',
+    title: 'Quantum Realm',
+    category: 'Science',
+    image: '/projects/quantum.jpg',
+    description: 'Visualization of subatomic particles and quantum mechanics phenomena.',
+  },
+  {
+    id: '5',
+    title: 'Nature\'s Fury',
+    category: 'Documentary',
+    image: '/projects/nature.jpg',
+    description: 'Cinematic natural disaster sequences with hyper-realistic physics.',
+  },
+  {
+    id: '6',
+    title: 'Digital Dreams',
+    category: 'Music Video',
+    image: '/projects/dreams.jpg',
+    description: 'Abstract motion graphics synchronized with electronica soundtrack.',
+  },
+]
+
+const NEWS_ITEMS = [
+  {
+    id: '1',
+    title: 'Nature Guru Wins Golden Globe for VFX Excellence',
+    category: 'Award',
+    date: 'Jan 15, 2026',
+    excerpt: 'Our work on "Nebula Odyssey" receives international recognition for groundbreaking visual effects and cinematography.',
+  },
+  {
+    id: '2',
+    title: 'Expanding Our Studio: Meet the New Talent',
+    category: 'Studio',
+    date: 'Jan 10, 2026',
+    excerpt: 'We\'re excited to welcome 25 new artists and technicians to the Nature Guru family this quarter.',
+  },
+  {
+    id: '3',
+    title: 'AI-Assisted Rendering: Our New Pipeline',
+    category: 'Technology',
+    date: 'Jan 5, 2026',
+    excerpt: 'Introducing our proprietary ML-assisted rendering engine that reduces render times by 40%.',
+  },
+  {
+    id: '4',
+    title: 'Collaboration with Netflix on Limited Series',
+    category: 'Partnership',
+    date: 'Dec 28, 2025',
+    excerpt: 'Partnering with Netflix to deliver visual effects for an upcoming limited series set to premiere in Q2 2026.',
+  },
+  {
+    id: '5',
+    title: 'Behind the Scenes: The Making of Quantum Realm',
+    category: 'Behind the Scenes',
+    date: 'Dec 20, 2025',
+    excerpt: 'A deep dive into our 18-month production journey creating realistic subatomic particle visualizations.',
+  },
+  {
+    id: '6',
+    title: 'Nature Guru Academy: Now Open for Enrollment',
+    category: 'Training',
+    date: 'Dec 15, 2025',
+    excerpt: 'Our new mentorship program is accepting applications for the upcoming cohort of emerging VFX artists.',
+  },
+]
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <ShowReel />
+      <InteractiveSphere />
+      <HeroSection />
+      <BeforeAfterSlider />
+      <NewsCards news={NEWS_ITEMS} />
+      <Scene3DIntegration />
+
+      {/* Spacer for demonstration */}
+      <section className="w-full h-96 flex items-center justify-center bg-gradient-to-b from-cinema to-atmosphere-blue/10">
+        <div className="text-center">
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+      </section>
+
+      <Footer />
+    </>
+  )
 }

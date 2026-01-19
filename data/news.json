@@ -1,0 +1,56 @@
+[
+  {
+    "id": "1",
+    "title": "Nature Guru Wins Golden Globe for VFX Excellence",
+    "category": "Award",
+    "date": "Jan 15, 2026",
+    "excerpt": "Our work on 'Nebula Odyssey' receives international recognition for groundbreaking visual effects and cinematography.",
+    "author": "Studio Team",
+    "featured": true
+  },
+  {
+    "id": "2",
+    "title": "Expanding Our Studio: Meet the New Talent",
+    "category": "Studio",
+    "date": "Jan 10, 2026",
+    "excerpt": "We're excited to welcome 25 new artists and technicians to the Nature Guru family this quarter.",
+    "author": "HR Team",
+    "featured": false
+  },
+  {
+    "id": "3",
+    "title": "AI-Assisted Rendering: Our New Pipeline",
+    "category": "Technology",
+    "date": "Jan 5, 2026",
+    "excerpt": "Introducing our proprietary ML-assisted rendering engine that reduces render times by 40%.",
+    "author": "Tech Lead",
+    "featured": true
+  },
+  {
+    "id": "4",
+    "title": "Collaboration with Netflix on Limited Series",
+    "category": "Partnership",
+    "date": "Dec 28, 2025",
+    "excerpt": "Partnering with Netflix to deliver visual effects for an upcoming limited series set to premiere in Q2 2026.",
+    "author": "Partnership Team",
+    "featured": false
+  },
+  {
+    "id": "5",
+    "title": "Behind the Scenes: The Making of Quantum Realm",
+    "category": "Behind the Scenes",
+    "date": "Dec 20, 2025",
+    "excerpt": "A deep dive into our 18-month production journey creating realistic subatomic particle visualizations.",
+    "author": "Production Team",
+    "featured": true
+  },
+  {
+    "id": "6",
+    "title": "Nature Guru Academy: Now Open for Enrollment",
+    "category": "Training",
+    "date": "Dec 15, 2025",
+    "excerpt": "Our new mentorship program is accepting applications for the upcoming cohort of emerging VFX artists.",
+    "author": "Education Team",
+    "featured": false
+  }
+]

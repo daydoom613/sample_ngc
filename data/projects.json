@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "title": "Nebula Odyssey",
+    "category": "Sci-Fi Film",
+    "description": "A journey through space exploring distant galaxies and cosmic phenomena.",
+    "year": 2025,
+    "studio": "Universal Pictures",
+    "awards": ["Golden Globe - Best VFX", "BAFTA - Technical Achievement"],
+    "tags": ["space", "sci-fi", "creature", "environment"]
+  },
+  {
+    "id": "2",
+    "title": "The Last Guardian",
+    "category": "Fantasy",
+    "description": "Epic creature animation and visual effects for a dark fantasy narrative.",
+    "year": 2024,
+    "studio": "Warner Bros",
+    "awards": ["BAFTA Nomination", "VES Award - Outstanding Animated Character"],
+    "tags": ["creature", "animation", "fantasy", "character"]
+  },
+  {
+    "id": "3",
+    "title": "Urban Genesis",
+    "category": "Commercial",
+    "description": "Photorealistic city simulation and procedural environment generation.",
+    "year": 2024,
+    "studio": "Brand Film",
+    "awards": ["Emmy - Outstanding Craft", "Streamies - Best Commercial VFX"],
+    "tags": ["procedural", "environment", "city", "commercial"]
+  },
+  {
+    "id": "4",
+    "title": "Quantum Realm",
+    "category": "Science",
+    "description": "Visualization of subatomic particles and quantum mechanics phenomena.",
+    "year": 2023,
+    "studio": "PBS Documentary",
+    "awards": ["Streamies - Animation", "Science Channel Award"],
+    "tags": ["science", "particles", "visualization", "educational"]
+  },
+  {
+    "id": "5",
+    "title": "Nature's Fury",
+    "category": "Documentary",
+    "description": "Cinematic natural disaster sequences with hyper-realistic physics.",
+    "year": 2023,
+    "studio": "National Geographic",
+    "awards": ["Emmy Nomination", "Discovery Channel Award"],
+    "tags": ["simulation", "disaster", "physics", "nature"]
+  },
+  {
+    "id": "6",
+    "title": "Digital Dreams",
+    "category": "Music Video",
+    "description": "Abstract motion graphics synchronized with electronica soundtrack.",
+    "year": 2025,
+    "studio": "Trent Reznor",
+    "awards": ["MTV Video Award", "Design Award - Motion Graphics"],
+    "tags": ["motion", "abstract", "music", "graphics"]
+  }
+]

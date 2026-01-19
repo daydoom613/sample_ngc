@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1",
+    "name": "Alex Rivera",
+    "role": "VFX Director",
+    "bio": "15+ years in VFX. Led effects on 30+ feature films. Passionate about mentoring emerging talent.",
+    "specialties": ["VFX Direction", "Creature Design", "Lighting"],
+    "image": "/mentors/alex.jpg",
+    "email": "alex@natureguru.com"
+  },
+  {
+    "id": "2",
+    "name": "Jordan Chen",
+    "role": "Technical Director",
+    "bio": "Expert in pipeline development and optimization. Loves solving complex technical challenges.",
+    "specialties": ["Pipeline", "Python", "Rendering"],
+    "image": "/mentors/jordan.jpg",
+    "email": "jordan@natureguru.com"
+  },
+  {
+    "id": "3",
+    "name": "Sofia Andersen",
+    "role": "Lead Animator",
+    "bio": "Award-winning animator focused on character movement and realism. Mentor to 10+ artists.",
+    "specialties": ["Animation", "Rigging", "Motion Capture"],
+    "image": "/mentors/sofia.jpg",
+    "email": "sofia@natureguru.com"
+  },
+  {
+    "id": "4",
+    "name": "Marcus Johnson",
+    "role": "Compositing Lead",
+    "bio": "20+ years in post-production. Expert in color science and compositing workflows.",
+    "specialties": ["Compositing", "Color", "VFX Integration"],
+    "image": "/mentors/marcus.jpg",
+    "email": "marcus@natureguru.com"
+  },
+  {
+    "id": "5",
+    "name": "Elena Rodriguez",
+    "role": "Creature Supervisor",
+    "bio": "Specialized in organic creature design and animation. Led creature teams on 15+ major projects.",
+    "specialties": ["Creature Design", "Animation", "Modeling"],
+    "image": "/mentors/elena.jpg",
+    "email": "elena@natureguru.com"
+  }
+]
