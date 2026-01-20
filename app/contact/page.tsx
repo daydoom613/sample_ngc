@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { motion } from 'framer-motion'
-import { GlassPrismNavbar } from '@/components/GlassPrismNavbar'
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { GlassPrismNavbar } from "@/components/GlassPrismNavbar";
 
 /**
  * Contact Page
@@ -10,38 +10,42 @@ import { GlassPrismNavbar } from '@/components/GlassPrismNavbar'
  */
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    projectType: 'film',
-    message: '',
-  })
+    name: "",
+    email: "",
+    company: "",
+    projectType: "film",
+    message: "",
+  });
 
-  const [submitted, setSubmitted] = useState(false)
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Simulate form submission
-    setSubmitted(true)
+    setSubmitted(true);
     setTimeout(() => {
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        projectType: 'film',
-        message: '',
-      })
-      setSubmitted(false)
-    }, 3000)
-  }
+        name: "",
+        email: "",
+        company: "",
+        projectType: "film",
+        message: "",
+      });
+      setSubmitted(false);
+    }, 3000);
+  };
 
   return (
-    <div className="w-full min-h-screen" style={{ backgroundColor: '#F5F5F7' }}>
+    <div className="w-full min-h-screen">
       <GlassPrismNavbar />
 
       {/* Hero Section */}
@@ -51,7 +55,7 @@ export default function ContactPage() {
           style={{
             backgroundImage:
               'url("data:image/svg+xml,%3Csvg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise" /%3E%3C/filter%3E%3Crect width="400" height="400" filter="url(%23noiseFilter)" /%3E%3C/svg%3E")',
-            backgroundSize: '200px 200px',
+            backgroundSize: "200px 200px",
           }}
         />
 
@@ -63,15 +67,16 @@ export default function ContactPage() {
         >
           <h1
             className="text-6xl md:text-7xl font-bold mb-6 leading-tight"
-            style={{ color: '#1D1D1F' }}
+            style={{ color: "#1D1D1F" }}
           >
-            Let's Create
+            Let&apos;s Create
           </h1>
           <p
             className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto"
-            style={{ color: 'rgba(29, 29, 31, 0.7)' }}
+            style={{ color: "rgba(29, 29, 31, 0.7)" }}
           >
-            Have a project in mind? We'd love to hear about it. Get in touch with our team today.
+            Have a project in mind? We&apos;d love to hear about it. Get in touch
+            with our team today.
           </p>
         </motion.div>
       </section>
@@ -88,7 +93,7 @@ export default function ContactPage() {
           >
             <h2
               className="text-4xl font-bold mb-8"
-              style={{ color: '#1D1D1F' }}
+              style={{ color: "#1D1D1F" }}
             >
               Send us a Message
             </h2>
@@ -98,7 +103,7 @@ export default function ContactPage() {
               <div>
                 <label
                   className="block text-sm font-semibold mb-2"
-                  style={{ color: '#1D1D1F' }}
+                  style={{ color: "#1D1D1F" }}
                 >
                   Your Name
                 </label>
@@ -110,9 +115,9 @@ export default function ContactPage() {
                   required
                   className="w-full px-4 py-3 rounded-lg backdrop-blur-md border transition-all focus:outline-none focus:border-opacity-100"
                   style={{
-                    backgroundColor: 'rgba(255, 255, 255, 0.06)',
-                    borderColor: 'rgba(255, 255, 255, 0.2)',
-                    color: '#1D1D1F',
+                    backgroundColor: "rgba(255, 255, 255, 0.06)",
+                    borderColor: "rgba(255, 255, 255, 0.2)",
+                    color: "#1D1D1F",
                   }}
                   placeholder="John Doe"
                 />
@@ -122,7 +127,7 @@ export default function ContactPage() {
               <div>
                 <label
                   className="block text-sm font-semibold mb-2"
-                  style={{ color: '#1D1D1F' }}
+                  style={{ color: "#1D1D1F" }}
                 >
                   Email
                 </label>
@@ -134,9 +139,9 @@ export default function ContactPage() {
                   required
                   className="w-full px-4 py-3 rounded-lg backdrop-blur-md border transition-all focus:outline-none focus:border-opacity-100"
                   style={{
-                    backgroundColor: 'rgba(255, 255, 255, 0.06)',
-                    borderColor: 'rgba(255, 255, 255, 0.2)',
-                    color: '#1D1D1F',
+                    backgroundColor: "rgba(255, 255, 255, 0.06)",
+                    borderColor: "rgba(255, 255, 255, 0.2)",
+                    color: "#1D1D1F",
                   }}
                   placeholder="john@example.com"
                 />
@@ -146,7 +151,7 @@ export default function ContactPage() {
               <div>
                 <label
                   className="block text-sm font-semibold mb-2"
-                  style={{ color: '#1D1D1F' }}
+                  style={{ color: "#1D1D1F" }}
                 >
                   Company / Studio
                 </label>
@@ -157,9 +162,9 @@ export default function ContactPage() {
                   onChange={handleChange}
                   className="w-full px-4 py-3 rounded-lg backdrop-blur-md border transition-all focus:outline-none focus:border-opacity-100"
                   style={{
-                    backgroundColor: 'rgba(255, 255, 255, 0.06)',
-                    borderColor: 'rgba(255, 255, 255, 0.2)',
-                    color: '#1D1D1F',
+                    backgroundColor: "rgba(255, 255, 255, 0.06)",
+                    borderColor: "rgba(255, 255, 255, 0.2)",
+                    color: "#1D1D1F",
                   }}
                   placeholder="Your Company"
                 />
@@ -169,7 +174,7 @@ export default function ContactPage() {
               <div>
                 <label
                   className="block text-sm font-semibold mb-2"
-                  style={{ color: '#1D1D1F' }}
+                  style={{ color: "#1D1D1F" }}
                 >
                   Project Type
                 </label>
@@ -179,9 +184,9 @@ export default function ContactPage() {
                   onChange={handleChange}
                   className="w-full px-4 py-3 rounded-lg backdrop-blur-md border transition-all focus:outline-none focus:border-opacity-100"
                   style={{
-                    backgroundColor: 'rgba(255, 255, 255, 0.06)',
-                    borderColor: 'rgba(255, 255, 255, 0.2)',
-                    color: '#1D1D1F',
+                    backgroundColor: "rgba(255, 255, 255, 0.06)",
+                    borderColor: "rgba(255, 255, 255, 0.2)",
+                    color: "#1D1D1F",
                   }}
                 >
                   <option value="film">Film / Narrative</option>
@@ -197,7 +202,7 @@ export default function ContactPage() {
               <div>
                 <label
                   className="block text-sm font-semibold mb-2"
-                  style={{ color: '#1D1D1F' }}
+                  style={{ color: "#1D1D1F" }}
                 >
                   Tell us about your project
                 </label>
@@ -209,9 +214,9 @@ export default function ContactPage() {
                   rows={5}
                   className="w-full px-4 py-3 rounded-lg backdrop-blur-md border transition-all focus:outline-none focus:border-opacity-100 resize-none"
                   style={{
-                    backgroundColor: 'rgba(255, 255, 255, 0.06)',
-                    borderColor: 'rgba(255, 255, 255, 0.2)',
-                    color: '#1D1D1F',
+                    backgroundColor: "rgba(255, 255, 255, 0.06)",
+                    borderColor: "rgba(255, 255, 255, 0.2)",
+                    color: "#1D1D1F",
                   }}
                   placeholder="Describe your project, timeline, and vision..."
                 />
@@ -223,9 +228,9 @@ export default function ContactPage() {
                 whileTap={{ scale: 0.95 }}
                 type="submit"
                 className="w-full py-3 rounded-lg font-semibold text-white transition-all"
-                style={{ backgroundColor: '#FF6347' }}
+                style={{ backgroundColor: "#FF6347" }}
               >
-                {submitted ? '✓ Message Sent!' : 'Send Message'}
+                {submitted ? "✓ Message Sent!" : "Send Message"}
               </motion.button>
             </form>
           </motion.div>
@@ -242,30 +247,30 @@ export default function ContactPage() {
             <div>
               <h3
                 className="text-2xl font-bold mb-4"
-                style={{ color: '#1D1D1F' }}
+                style={{ color: "#1D1D1F" }}
               >
                 Los Angeles Studio
               </h3>
               <div
                 className="p-6 rounded-xl backdrop-blur-md border"
                 style={{
-                  backgroundColor: 'rgba(255, 255, 255, 0.06)',
-                  borderColor: 'rgba(46, 139, 87, 0.2)',
+                  backgroundColor: "rgba(255, 255, 255, 0.06)",
+                  borderColor: "rgba(46, 139, 87, 0.2)",
                 }}
               >
-                <p style={{ color: 'rgba(29, 29, 31, 0.8)' }} className="mb-3">
+                <p style={{ color: "rgba(29, 29, 31, 0.8)" }} className="mb-3">
                   <strong>Address:</strong>
                   <br />
                   1234 Sunset Boulevard
                   <br />
                   Los Angeles, CA 90028
                 </p>
-                <p style={{ color: 'rgba(29, 29, 31, 0.8)' }} className="mb-3">
+                <p style={{ color: "rgba(29, 29, 31, 0.8)" }} className="mb-3">
                   <strong>Phone:</strong>
                   <br />
                   +1 (310) 555-0123
                 </p>
-                <p style={{ color: 'rgba(29, 29, 31, 0.8)' }}>
+                <p style={{ color: "rgba(29, 29, 31, 0.8)" }}>
                   <strong>Email:</strong>
                   <br />
                   hello@natureguru.com
@@ -277,29 +282,30 @@ export default function ContactPage() {
             <div>
               <h3
                 className="text-2xl font-bold mb-4"
-                style={{ color: '#1D1D1F' }}
+                style={{ color: "#1D1D1F" }}
               >
                 Remote Collaboration
               </h3>
               <div
                 className="p-6 rounded-xl backdrop-blur-md border"
                 style={{
-                  backgroundColor: 'rgba(255, 255, 255, 0.06)',
-                  borderColor: 'rgba(46, 139, 87, 0.2)',
+                  backgroundColor: "rgba(255, 255, 255, 0.06)",
+                  borderColor: "rgba(46, 139, 87, 0.2)",
                 }}
               >
-                <p style={{ color: 'rgba(29, 29, 31, 0.8)' }}>
-                  We work with studios and creators globally. Whether you're in Los Angeles, London,
-                  or Tokyo, we can collaborate seamlessly through our remote-first pipeline.
+                <p style={{ color: "rgba(29, 29, 31, 0.8)" }}>
+                  We work with studios and creators globally. Whether you&apos;re in
+                  Los Angeles, London, or Tokyo, we can collaborate seamlessly
+                  through our remote-first pipeline.
                 </p>
                 <div className="mt-4 space-y-2">
-                  <p style={{ color: 'rgba(29, 29, 31, 0.7)' }}>
+                  <p style={{ color: "rgba(29, 29, 31, 0.7)" }}>
                     ✓ Real-time collaboration tools
                   </p>
-                  <p style={{ color: 'rgba(29, 29, 31, 0.7)' }}>
+                  <p style={{ color: "rgba(29, 29, 31, 0.7)" }}>
                     ✓ Cloud-based asset management
                   </p>
-                  <p style={{ color: 'rgba(29, 29, 31, 0.7)' }}>
+                  <p style={{ color: "rgba(29, 29, 31, 0.7)" }}>
                     ✓ Timezone flexibility
                   </p>
                 </div>
@@ -310,12 +316,12 @@ export default function ContactPage() {
             <div>
               <h3
                 className="text-2xl font-bold mb-4"
-                style={{ color: '#1D1D1F' }}
+                style={{ color: "#1D1D1F" }}
               >
                 Follow Us
               </h3>
               <div className="flex gap-4">
-                {['Instagram', 'LinkedIn', 'Vimeo', 'Twitter'].map((social) => (
+                {["Instagram", "LinkedIn", "Vimeo", "Twitter"].map((social) => (
                   <motion.a
                     key={social}
                     href="#"
@@ -323,9 +329,9 @@ export default function ContactPage() {
                     whileTap={{ scale: 0.95 }}
                     className="w-12 h-12 rounded-lg flex items-center justify-center backdrop-blur-md border transition-all"
                     style={{
-                      backgroundColor: 'rgba(255, 99, 71, 0.1)',
-                      borderColor: 'rgba(255, 99, 71, 0.3)',
-                      color: '#FF6347',
+                      backgroundColor: "rgba(255, 99, 71, 0.1)",
+                      borderColor: "rgba(255, 99, 71, 0.3)",
+                      color: "#FF6347",
                     }}
                   >
                     {social[0]}
@@ -340,5 +346,5 @@ export default function ContactPage() {
       {/* Footer Spacer */}
       <div className="h-32" />
     </div>
-  )
+  );
 }

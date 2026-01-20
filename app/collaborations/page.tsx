@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { GlassPrismNavbar } from '@/components/GlassPrismNavbar'
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { GlassPrismNavbar } from "@/components/GlassPrismNavbar";
 
 /**
  * Collaborations Page - Trust Wall (Step 5, Trust Wall #23)
@@ -12,10 +12,12 @@ import { GlassPrismNavbar } from '@/components/GlassPrismNavbar'
  * - Carousel of case studies
  */
 export default function CollaborationsPage() {
-  const [expandedTestimonial, setExpandedTestimonial] = useState<string | null>(null)
+  const [expandedTestimonial, setExpandedTestimonial] = useState<string | null>(
+    null
+  );
 
   return (
-    <div className="w-full min-h-screen" style={{ backgroundColor: '#F5F5F7' }}>
+    <div className="w-full min-h-screen">
       <GlassPrismNavbar />
 
       {/* Hero Section */}
@@ -25,7 +27,7 @@ export default function CollaborationsPage() {
           style={{
             backgroundImage:
               'url("data:image/svg+xml,%3Csvg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise" /%3E%3C/filter%3E%3Crect width="400" height="400" filter="url(%23noiseFilter)" /%3E%3C/svg%3E")',
-            backgroundSize: '200px 200px',
+            backgroundSize: "200px 200px",
           }}
         />
 
@@ -37,16 +39,16 @@ export default function CollaborationsPage() {
         >
           <h1
             className="text-6xl md:text-7xl font-bold mb-6 leading-tight"
-            style={{ color: '#1D1D1F' }}
+            style={{ color: "#1D1D1F" }}
           >
             Collaborations
           </h1>
           <p
             className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto"
-            style={{ color: 'rgba(29, 29, 31, 0.7)' }}
+            style={{ color: "rgba(29, 29, 31, 0.7)" }}
           >
-            Trusted by the world's leading studios, networks, and brands to bring their visions to
-            life.
+            Trusted by the world&apos;s leading studios, networks, and brands to
+            bring their visions to life.
           </p>
         </motion.div>
       </section>
@@ -60,7 +62,7 @@ export default function CollaborationsPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-4xl font-bold mb-16 text-center"
-            style={{ color: '#1D1D1F' }}
+            style={{ color: "#1D1D1F" }}
           >
             Our Partners
           </motion.h2>
@@ -77,8 +79,8 @@ export default function CollaborationsPage() {
                 whileHover={{ scale: 1.1 }}
                 className="flex items-center justify-center p-6 rounded-xl backdrop-blur-md border transition-all duration-300 cursor-pointer group"
                 style={{
-                  backgroundColor: 'rgba(255, 255, 255, 0.06)',
-                  borderColor: 'rgba(46, 139, 87, 0.2)',
+                  backgroundColor: "rgba(255, 255, 255, 0.06)",
+                  borderColor: "rgba(46, 139, 87, 0.2)",
                 }}
               >
                 <div
@@ -104,7 +106,7 @@ export default function CollaborationsPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-4xl font-bold mb-12 text-center"
-            style={{ color: '#1D1D1F' }}
+            style={{ color: "#1D1D1F" }}
           >
             What They Say
           </motion.h2>
@@ -122,29 +124,31 @@ export default function CollaborationsPage() {
                 <motion.button
                   onClick={() =>
                     setExpandedTestimonial(
-                      expandedTestimonial === testimonial.id ? null : testimonial.id
+                      expandedTestimonial === testimonial.id
+                        ? null
+                        : testimonial.id
                     )
                   }
                   className="w-full text-left p-6 rounded-xl backdrop-blur-md border transition-all duration-300"
                   style={{
-                    backgroundColor: 'rgba(255, 255, 255, 0.06)',
+                    backgroundColor: "rgba(255, 255, 255, 0.06)",
                     borderColor:
                       expandedTestimonial === testimonial.id
-                        ? 'rgba(255, 99, 71, 0.5)'
-                        : 'rgba(255, 255, 255, 0.2)',
+                        ? "rgba(255, 99, 71, 0.5)"
+                        : "rgba(255, 255, 255, 0.2)",
                   }}
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex-1">
                       <h3
                         className="text-lg font-bold mb-1"
-                        style={{ color: '#1D1D1F' }}
+                        style={{ color: "#1D1D1F" }}
                       >
                         {testimonial.author}
                       </h3>
                       <p
                         className="text-sm"
-                        style={{ color: 'rgba(29, 29, 31, 0.6)' }}
+                        style={{ color: "rgba(29, 29, 31, 0.6)" }}
                       >
                         {testimonial.role}
                       </p>
@@ -155,7 +159,7 @@ export default function CollaborationsPage() {
                           expandedTestimonial === testimonial.id ? 180 : 0,
                       }}
                       transition={{ duration: 0.3 }}
-                      style={{ color: '#FF6347' }}
+                      style={{ color: "#FF6347" }}
                     >
                       ▼
                     </motion.div>
@@ -166,24 +170,21 @@ export default function CollaborationsPage() {
                     {expandedTestimonial === testimonial.id && (
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
+                        animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3 }}
                         className="mt-4 pt-4 border-t"
-                        style={{ borderColor: 'rgba(255, 255, 255, 0.2)' }}
+                        style={{ borderColor: "rgba(255, 255, 255, 0.2)" }}
                       >
                         <p
                           className="text-base leading-relaxed"
-                          style={{ color: 'rgba(29, 29, 31, 0.8)' }}
+                          style={{ color: "rgba(29, 29, 31, 0.8)" }}
                         >
-                          "{testimonial.quote}"
+                          &quot;{testimonial.quote}&quot;
                         </p>
                         <div className="mt-4 flex gap-1">
                           {[...Array(5)].map((_, i) => (
-                            <span
-                              key={i}
-                              style={{ color: '#FFD700' }}
-                            >
+                            <span key={i} style={{ color: "#FFD700" }}>
                               ★
                             </span>
                           ))}
@@ -207,7 +208,7 @@ export default function CollaborationsPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-4xl font-bold mb-12"
-            style={{ color: '#1D1D1F' }}
+            style={{ color: "#1D1D1F" }}
           >
             Featured Case Studies
           </motion.h2>
@@ -225,8 +226,8 @@ export default function CollaborationsPage() {
                 <div
                   className="p-8 rounded-xl backdrop-blur-md border transition-all duration-300"
                   style={{
-                    backgroundColor: 'rgba(255, 255, 255, 0.06)',
-                    borderColor: 'rgba(255, 99, 71, 0.2)',
+                    backgroundColor: "rgba(255, 255, 255, 0.06)",
+                    borderColor: "rgba(255, 99, 71, 0.2)",
                   }}
                 >
                   <div
@@ -240,14 +241,14 @@ export default function CollaborationsPage() {
 
                   <h3
                     className="text-2xl font-bold mb-2"
-                    style={{ color: '#1D1D1F' }}
+                    style={{ color: "#1D1D1F" }}
                   >
                     {study.title}
                   </h3>
 
                   <p
                     className="mb-4"
-                    style={{ color: 'rgba(29, 29, 31, 0.7)' }}
+                    style={{ color: "rgba(29, 29, 31, 0.7)" }}
                   >
                     {study.description}
                   </p>
@@ -255,13 +256,13 @@ export default function CollaborationsPage() {
                   <div className="space-y-2 mb-6">
                     <p
                       className="text-sm font-semibold"
-                      style={{ color: '#FF6347' }}
+                      style={{ color: "#FF6347" }}
                     >
                       Results:
                     </p>
                     <ul
                       className="text-sm space-y-1"
-                      style={{ color: 'rgba(29, 29, 31, 0.7)' }}
+                      style={{ color: "rgba(29, 29, 31, 0.7)" }}
                     >
                       {study.results.map((result, i) => (
                         <li key={i}>• {result}</li>
@@ -272,7 +273,7 @@ export default function CollaborationsPage() {
                   <motion.button
                     whileHover={{ x: 5 }}
                     className="text-sm font-semibold transition-colors"
-                    style={{ color: '#FF6347' }}
+                    style={{ color: "#FF6347" }}
                   >
                     Read Full Case Study →
                   </motion.button>
@@ -294,23 +295,24 @@ export default function CollaborationsPage() {
           >
             <h2
               className="text-4xl md:text-5xl font-bold mb-6"
-              style={{ color: '#1D1D1F' }}
+              style={{ color: "#1D1D1F" }}
             >
-              Let's Work Together
+              Let&apos;s Work Together
             </h2>
             <p
               className="text-lg mb-8"
-              style={{ color: 'rgba(29, 29, 31, 0.7)' }}
+              style={{ color: "rgba(29, 29, 31, 0.7)" }}
             >
-              Join the studios and brands that trust Nature Guru to elevate their creative vision.
+              Join the studios and brands that trust Nature Guru to elevate
+              their creative vision.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-3 rounded-lg font-semibold transition-all duration-300"
               style={{
-                backgroundColor: '#FF6347',
-                color: '#F5F5F7',
+                backgroundColor: "#FF6347",
+                color: "#F5F5F7",
               }}
             >
               Start a Collaboration
@@ -322,102 +324,105 @@ export default function CollaborationsPage() {
       {/* Footer Spacer */}
       <div className="h-32" />
     </div>
-  )
+  );
 }
 
 const CLIENT_LOGOS = [
-  { id: '1', initials: 'NG', color: '#2E8B57' },
-  { id: '2', initials: 'DC', color: '#FF6347' },
-  { id: '3', initials: 'WB', color: '#1D1D1F' },
-  { id: '4', initials: 'PA', color: '#87CEEB' },
-  { id: '5', initials: 'FOX', color: '#FFD700' },
-  { id: '6', initials: 'UN', color: '#4169E1' },
-  { id: '7', initials: 'AMZ', color: '#FF9900' },
-  { id: '8', initials: 'NF', color: '#E50914' },
-  { id: '9', initials: 'DIS', color: '#113CCF' },
-  { id: '10', initials: 'PR', color: '#1F3A70' },
-  { id: '11', initials: 'SN', color: '#6BA3E0' },
-  { id: '12', initials: 'GG', color: '#F4AA4D' },
-]
+  { id: "1", initials: "NG", color: "#2E8B57" },
+  { id: "2", initials: "DC", color: "#FF6347" },
+  { id: "3", initials: "WB", color: "#1D1D1F" },
+  { id: "4", initials: "PA", color: "#87CEEB" },
+  { id: "5", initials: "FOX", color: "#FFD700" },
+  { id: "6", initials: "UN", color: "#4169E1" },
+  { id: "7", initials: "AMZ", color: "#FF9900" },
+  { id: "8", initials: "NF", color: "#E50914" },
+  { id: "9", initials: "DIS", color: "#113CCF" },
+  { id: "10", initials: "PR", color: "#1F3A70" },
+  { id: "11", initials: "SN", color: "#6BA3E0" },
+  { id: "12", initials: "GG", color: "#F4AA4D" },
+];
 
 const TESTIMONIALS = [
   {
-    id: '1',
-    author: 'Christopher Nolan',
-    role: 'Film Director',
+    id: "1",
+    author: "Christopher Nolan",
+    role: "Film Director",
     quote:
-      'Nature Guru\'s approach to invisible effects transformed how we think about visual storytelling. Their technical mastery combined with artistic sensibility is unparalleled.',
+      "Nature Guru's approach to invisible effects transformed how we think about visual storytelling. Their technical mastery combined with artistic sensibility is unparalleled.",
   },
   {
-    id: '2',
-    author: 'Sarah Chen',
-    role: 'Creative Director, Leading Studio',
+    id: "2",
+    author: "Sarah Chen",
+    role: "Creative Director, Leading Studio",
     quote:
-      'Working with Nature Guru was a game-changer for our production. They delivered not just effects, but solutions that elevated the entire project.',
+      "Working with Nature Guru was a game-changer for our production. They delivered not just effects, but solutions that elevated the entire project.",
   },
   {
-    id: '3',
-    author: 'Marcus Johnson',
-    role: 'Executive Producer',
+    id: "3",
+    author: "Marcus Johnson",
+    role: "Executive Producer",
     quote:
-      'Their commitment to transparency and collaboration made the entire production smoother. Plus, the quality speaks for itself.',
+      "Their commitment to transparency and collaboration made the entire production smoother. Plus, the quality speaks for itself.",
   },
   {
-    id: '4',
-    author: 'Elena Rodriguez',
-    role: 'VFX Supervisor',
+    id: "4",
+    author: "Elena Rodriguez",
+    role: "VFX Supervisor",
     quote:
-      'Nature Guru brings a level of innovation and execution that\'s hard to find. They\'re partners in the truest sense.',
+      "Nature Guru brings a level of innovation and execution that's hard to find. They're partners in the truest sense.",
   },
-]
+];
 
 const CASE_STUDIES = [
   {
-    id: '1',
-    logo: '✦',
-    color: '#2E8B57',
-    title: 'Nebula Odyssey',
-    description: 'A sci-fi epic requiring cutting-edge space visualization and alien creature design.',
+    id: "1",
+    logo: "✦",
+    color: "#2E8B57",
+    title: "Nebula Odyssey",
+    description:
+      "A sci-fi epic requiring cutting-edge space visualization and alien creature design.",
     results: [
-      'Golden Globe for Best Visual Effects',
-      '4M+ viewer engagement',
-      'Industry-leading render optimization',
+      "Golden Globe for Best Visual Effects",
+      "4M+ viewer engagement",
+      "Industry-leading render optimization",
     ],
   },
   {
-    id: '2',
-    logo: '⚔',
-    color: '#FF6347',
-    title: 'The Last Guardian',
-    description: 'Fantasy film featuring complex creature animation and environmental magic effects.',
+    id: "2",
+    logo: "⚔",
+    color: "#FF6347",
+    title: "The Last Guardian",
+    description:
+      "Fantasy film featuring complex creature animation and environmental magic effects.",
     results: [
-      'BAFTA nomination for Best Craft',
-      'Set new standard for creature realism',
-      '8-month ahead of schedule',
+      "BAFTA nomination for Best Craft",
+      "Set new standard for creature realism",
+      "8-month ahead of schedule",
     ],
   },
   {
-    id: '3',
-    logo: '🏢',
-    color: '#87CEEB',
-    title: 'Urban Genesis',
-    description: 'Large-scale commercial project with procedural city generation.',
+    id: "3",
+    logo: "🏢",
+    color: "#87CEEB",
+    title: "Urban Genesis",
+    description:
+      "Large-scale commercial project with procedural city generation.",
     results: [
-      'Emmy award recognition',
-      '50% reduction in iteration time',
-      'Pioneered real-time rendering pipeline',
+      "Emmy award recognition",
+      "50% reduction in iteration time",
+      "Pioneered real-time rendering pipeline",
     ],
   },
   {
-    id: '4',
-    logo: '⚛',
-    color: '#FFD700',
-    title: 'Quantum Realm',
-    description: 'Educational documentary with particle physics visualization.',
+    id: "4",
+    logo: "⚛",
+    color: "#FFD700",
+    title: "Quantum Realm",
+    description: "Educational documentary with particle physics visualization.",
     results: [
-      'Streamies Award for Animation',
-      'Used in 500+ classrooms worldwide',
-      'Published in 3 research papers',
+      "Streamies Award for Animation",
+      "Used in 500+ classrooms worldwide",
+      "Published in 3 research papers",
     ],
   },
-]
+];

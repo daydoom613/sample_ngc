@@ -16,7 +16,7 @@ export default function CareersPage() {
   const [selectedRole, setSelectedRole] = useState<string | null>(null)
 
   return (
-    <div className="w-full min-h-screen" style={{ backgroundColor: '#F5F5F7' }}>
+    <div className="w-full min-h-screen">
       <GlassPrismNavbar />
 
       {/* Hero Section */}
